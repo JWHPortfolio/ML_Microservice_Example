@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import confusion_matrix, accuracy_score
 
+
 class randomforest:
     def model_learn(self):
         print('Model Learning')
