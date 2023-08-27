@@ -24,10 +24,11 @@ def hellopost():
     args = request.args
     name = args.get('name')
     location = args.get('location')
-    image = args.get('image')
     print("Name: ", name, " Location: ", location)
-    print("Image: ", image)
-    return 'Hello, Post!'
+    imagefile = request.files.get('imagefile', '')
+    print("Image: ", imagefile.filename)
+    imagefile.save('/workspace/Hopkins/705.603Fall2023/workspace/ML_Microservice_Example/image.jpg')
+    return 'File Received - Thank you'
 
 if __name__ == "__main__":
     flaskPort = 8786
