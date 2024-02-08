@@ -2,4 +2,3 @@ numpy
 sklearn
 pandas
 flask
-os
